@@ -1,334 +1,386 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap');
+
+
 *{
     margin: 0;
     padding: 0;
 }
 
-.img-principal h1{
-    position: absolute;
-    top: 35%;
-    left: 51%;
-    letter-spacing: 6px;
-    transform: translate(-50%, -50%);
-    font-weight: bold;
-    font-family: 'Fraunces', 'serif';
+/* cabeçalho */
+header{
+    background-image: url(./images/desktop/image-header.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 610px;
+}
+
+header h1{
     text-align: center;
     color: white;
+    text-transform: uppercase;
+    font-family: 'Fraunces', serif;
+    font-size: 2.5em;
+    letter-spacing: .2em;
+    margin-top: 30px;
+    font-weight: 900;
 }
 
-.img-principal svg{
-    position: absolute;
-    align-items: center;
-    left: 49%;
-    top: 49.5%;
-}
-
-header .nav-list{
- position: absolute;
- top: 5%;
- left: 65%;
-}
-
-header ul{
+header .seta{
     display: flex;
+    justify-content: center;
+    position: relative;
+    top: 80px;
+}
+
+/* barra de navegação */
+nav {
+    left: 0;
+    right: 0;
+    top: 0;
+    padding: 0 5%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Fraunces', serif;
+}
+
+nav .logotip {
+    float: left;
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2em;
+    font-weight: 900;
+    color: #fff;
+    cursor: context-menu;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+nav ul li {
     list-style: none;
+    font-weight: 600;
+    font-family: 'Barlow', serif;
+    
 }
 
-header li{
-    margin: 0px 45px 0px 0px;
-    color: white;
-    font-family: 'Barlow', 'sans-serif';
-    font-size: 16px;
+nav ul a {
+    display: block; 
+    padding: 1em;
+    font-size: 1em;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.2s;
 }
 
-header svg{
-    position: absolute;
-    top: 4%;
-    right: 270%;
-}
-
-header button{
-    height: 40px;
-    width: 100px;
-    border: none;
+.b-contact{
     background-color: white;
+    color: black;
+    width: 100px;
+    height: 40px;
     border-radius: 20px;
-    font-family: 'Fraunces', 'sans-serif';
     font-weight: bold;
-    margin-top: -10px;
+    font-size: 0.8em;
+    border: none;
+    cursor: pointer;
 }
 
-.inicio h2{
-    font-size: 37px;
-    font-family: 'Fraunces', 'serif';
+
+/* Botão do menu responsivo */
+#nav-toggle {
     position: absolute;
-    top: 143%;
-    left: 11.5%;
+    top: -100px;
 }
 
-.inicio p{
+nav .burger {
+    display: none;
+    position: absolute;
+    right: 5%;
+    top: 8%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+nav .burger .linha {
+    width: 30px;
+    height: 5px;
+    background-color: #fff;
+    margin: 5px;
+    border-radius: 3px;
+    transition: all .3s ease-in-out;
+}
+
+
+/* COMECO segunda parte ......................................................................................*/
+section{
+    width: 100%;
+}
+
+.Caixas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.caixa-egg{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+}
+
+.caixa-egg img{
+  width: 100%;
+}
+
+#transform-brand{
+  margin: auto;
+  max-width: 60%;
+}
+
+#transform-brand p{
+    margin-top: 30px;
     font-size: 16px;
-    position: absolute;
-    top: 162%;
-    left: 11.5%;
-    color: hsl(213, 9%, 39%);
-    font-family: 'Barlow', 'sans-serif';
-    line-height: 30px;
+    line-height: 28px;
+    font-family: 'Barlow', sans-serif;
+    color: hsl(210, 4%, 67%);
 }
 
-.inicio h4{
-    font-size: 14px;
-    position: absolute;
-    top: 183%;
-    left: 11.5%;
-    font-family: 'Fraunces', 'serif';
+#transform-brand input{
+    font-family: 'Fraunces', serif;
+    margin-top: 25px;
+    cursor: pointer;
 }
 
-.ovo-gigante{
-    position: absolute;
-    left: 50%;
-    top: 116.3%;
+#transform-brand h1{
+    color:hsl(212, 27%, 19%);
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
 }
 
-.second h2{
-    font-size: 37px;
-    font-family: 'Fraunces', 'serif';
-    position: absolute;
-    top: 228%;
-    left: 57.5%;
+#transform-brand input{
+    background-color: white;
+    border: none;
+    border-bottom: 4px solid hsla(51, 100%, 49%, 0.283);
+    font-size: 15px;
+    border-radius: 2px;
 }
 
-.second p{
+/* ............................................................................................................ */
+
+.copo-rosa{
+    display: grid;
+   grid-template-columns: 1fr 1fr;
+}
+
+.copo-rosa img{
+    width: 100%;
+}
+
+#stand-out{
+    margin: auto;
+    font-size: 20px;
+    font-weight: 600;
+    max-width: 60%;
+}
+
+#stand-out p{
+    margin-top: 30px;
     font-size: 16px;
-    position: absolute;
-    top: 247%;
-    left: 57.5%;
-    color: hsl(213, 9%, 39%);
-    font-family: 'Barlow', 'sans-serif';
-    line-height: 30px;
+    line-height: 28px;
+    font-family: 'Barlow', sans-serif;
+    color: hsl(210, 4%, 67%);
 }
 
-.second h4{
-    font-size: 14px;
-    position: absolute;
-    top: 268%;
-    left: 57.5%;
-    font-family: 'Fraunces', 'serif';
+#stand-out input{
+    font-family: 'Fraunces', serif;
+    margin-top: 25px;
+    cursor: pointer;
 }
 
-.copo-gigante{
-    position: absolute;
-    right: 50%;
-    top: 203.3%;
+#stand-out h1{
+    color:hsl(212, 27%, 19%);
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
 }
 
-.grap h2{
-    font-size: 28px;
-    font-family: 'Fraunces', 'serif';
-    position: absolute;
-    top: 348%;
-    left: 17%;
+#stand-out input{
+    background-color: white;
+    border: none;
+    border-bottom: 4px solid hsla(7, 99%, 70%, 0.299);
+    font-size: 15px;
+    border-radius: 2px;
+}
+
+/* ................................................................................................ */
+
+.cereja-mexerica{
+    display:flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#Cereja{
+    background-image: url(./images/desktop/image-graphic-design.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 33em;
+    width: 50%;
+}
+
+#caixa-cereja{
+    position: relative;
+    top: 60%;
+}
+
+#Cereja h2{
+    text-align: center;
+    font-family: 'Fraunces', serif;
     color: hsl(167, 40%, 24%);
+    font-weight: 900;
 }
 
-.photo h2{
-    font-size: 28px;
-    font-family: 'Fraunces', 'serif';
-    position: absolute;
-    top: 348%;
-    left: 68%;
+#Cereja p{
+    width: 53%;
+    text-align: center;
+    margin-left: 23%;
+    font-family: 'Barlow', sans-serif;
+    color: hsla(167, 40%, 24%, 0.813);
+    margin-top: 30px;
+    line-height: 26px;
+    font-weight: 600;
+}
+
+#mexerica{
+    background-image: url(./images/desktop/image-photography.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 33em;
+    width: 50%;
+}
+
+#caixa-mexerica{
+    position: relative;
+    top: 60%;
+}
+
+#mexerica h2{
+    text-align: center;
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
     color: hsl(198, 62%, 26%);
 }
 
-.grap p{
-    font-size: 14px;
-    position: absolute;
-    top: 357%;
-    left: 13.7%;
-    color: hsla(167, 40%, 24%, 0.708);
-    font-family: 'Barlow', 'sans-serif';
-    line-height: 25px;
+#mexerica p{
+    width: 50%;
+    text-align: center;
+    margin-left: 25%;
+    font-family: 'Barlow', sans-serif;
+    color: hsla(198, 62%, 26%, 0.785);
+    line-height: 26px;
+    margin-top: 30px;
+    font-weight: 600;
+}
+/* FIM segunda parte  ............................................*/
+
+
+/* COMEÇO DO CSS DE TESTIMONIALS --------------------------------------------------- */
+#caixa-testemunhos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
 }
 
-.photo p{
-    font-size: 14px;
-    position: absolute;
-    top: 357%;
-    left: 63.7%;
-    color: hsla(198, 62%, 26%, 0.808);
-    font-family: 'Barlow', 'sans-serif';
-    line-height: 25px;
+#caixa-testemunhos h1{
+    color: hsl(210, 4%, 67%);
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: 1.2em;
+    letter-spacing: 0.25em;
+    text-align: center;
+    padding-top: 6em;
+}
+
+.testemunhos{
+    display: flex;
+    margin-top: 4em;
+    align-items: center;
+}
+
+.cliente{
+    margin-left: 3em;
     text-align: center;
 }
 
-.cejera{
-    position: absolute;
-    right: 50%;
-    top: 290.3%;
+.cliente img{
+    border-radius: 30em;
+    width: 4em;
 }
 
-.lajanra{
-    position: absolute;
-    left: 50%;
-    top: 290.3%;
-}
-
-.clients h2{
-        font-size: 20px;
-        font-family: 'Fraunces', 'serif';
-        position: absolute;
-        top: 400%;
-        left: 37%;
-        letter-spacing: 6px;
-        color: hsl(213, 9%, 39%);
-}
-
-.Emily img{
-    position: absolute;
-    left: 20%;
-    top: 413.3%;
-    border-radius: 100%;
-}
-
-.Emily p{
-    position: absolute;
-    left: 10.5%;
-    top: 430.3%;
-    text-align: center;
-    font-family: 'Barlow', 'sans-serif';
-    line-height: 24px;
+.txt-testimonials p{
+    font-family: 'Barlow', sans-serif;
     color: hsl(213, 9%, 39%);
+    font-size: 1em;
+    margin-top: 4em;
+    line-height: 1.5em;
 }
 
-.Emily h4{
-    position: absolute;
-    left: 20%;
-    top: 449.3%;
-    text-align: center;
-    font-family: 'Fraunce', 'serif';
-    line-height: 24px;
-    color: black;
+.info-cliente{
+    margin-top: 5em;
 }
 
-.Emily h5{
-    position: absolute;
-    left: 18%;
-    top: 453.7%;
-    text-align: center;
-    font-family: 'Barlow', 'sans-serif';
-    line-height: 24px;
-    color: hsla(210, 9%, 39%, 0.801);
+.info-cliente h2{
+    font-family: 'Fraunces', serif;
+    color: hsl(212, 27%, 19%);
+    font-size: 1em;
+    font-weight: 900;
 }
 
-
-.Tom img{
-    position: absolute;
-    left: 48%;
-    top: 413.3%;
-    border-radius: 100%;
+.info-cliente p{
+    font-family: 'Barlow', sans-serif;
+    font-size: 0.8em;
+    color: hsl(210, 4%, 67%);
+    margin-top: 1em;
 }
 
-.Tom p{
-    position: absolute;
-    left: 38.5%;
-    top: 430.3%;
-    text-align: center;
-    font-family: 'Barlow', 'sans-serif';
-    line-height: 24px;
-    color: hsl(213, 9%, 39%);
+/* FIM DO CSS DE TESTIMONIALS ------------------------------------------------------ */
+
+/* INICIO DA ESTILIZAÇÃO DAS IMAGENS ANTES DO FOODER ------------------------------- */
+
+#imagens-pre-footer{
+    display: flex;
+    margin-top: 10em;
+    max-width: 100%;
 }
 
-.Tom h4{
-    position: absolute;
-    left: 47.5%;
-    top: 449.3%;
-    text-align: center;
-    font-family: 'Fraunce', 'serif';
-    line-height: 24px;
-    color: black;
-}
-
-.Tom h5{
-    position: absolute;
-    left: 45%;
-    top: 453.7%;
-    text-align: center;
-    font-family: 'Barlow', 'sans-serif';
-    line-height: 24px;
-    color: hsla(210, 9%, 39%, 0.801);
-}
-
-.Jen img{
-    position: absolute;
-    left: 76%;
-    top: 413.3%;
-    border-radius: 100%;
-}
-
-.Jen p{
-    position: absolute;
-    left: 66.5%;
-    top: 430.3%;
-    text-align: center;
-    font-family: 'Barlow', 'sans-serif';
-    line-height: 24px;
-    color: hsl(213, 9%, 39%);
-}
-
-.Jen h4{
-    position: absolute;
-    left: 76%;
-    top: 449.3%;
-    text-align: center;
-    font-family: 'Fraunce', 'serif';
-    line-height: 24px;
-    color: black;
-}
-
-.Jen h5{
-    position: absolute;
-    left: 75%;
-    top: 453.7%;
-    text-align: center;
-    font-family: 'Barlow', 'sans-serif';
-    line-height: 24px;
-    color: hsla(210, 9%, 39%, 0.804);
-}
-
-.leite{
-    position: absolute;
+#imagens-pre-footer img{
     width: 25%;
-    top: 475%;
 }
 
-.laran{
-    position: absolute;
-    width: 25%;
-    top: 475%;
-    left: 25%;
-}
+/* FIM DA ESTILIZAÇÂO DAS IMAGENS -------------------------------------------------- */
 
-.casquinha{
-    position: absolute;
-    width: 25%;
-    top: 475%;
-    left: 50%;
-}
-
-.cubins{
-    position: absolute;
-    width: 25%;
-    top: 475%;
-    left: 75%;
-}
+/* FOOTER -------------------------------------------------------------------------- */
 
 footer{
     background-color: hsl(168, 44%, 68%);
-    margin-top: 200%;
+    margin-top: -0.25em;
     height: 20em;
 }
 
-.title-footer{
+.logo-footer{
     text-align: center;
     padding-top: 4em;
     font-family: 'Poppins', sans-serif; 
@@ -354,13 +406,195 @@ footer{
     font-family: 'Barlow', sans-serif;
 }
 
-.icons{
+.icones{
     text-align: center;
     margin-top: 5em;
     margin-left: -1.5em;
 }
 
-.icons img{
+.icones img{
     padding-left: 1.5em;
 }
 
+/* FIM DO FOOTER ---------------------------------------------------------- */
+
+
+
+/* Transição para responsivo */
+@media screen and (max-width: 600px) {
+    header .seta-baixo{
+        position: relative;
+        top: 50px;
+    }
+
+
+    nav .logotip {
+        float: none;
+        width: auto;
+        justify-content: center;
+    }
+
+    nav ul {
+        float: none;
+        position: fixed;
+        z-index: 9;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 100%;
+        width: auto;
+        height: auto;
+        flex-direction: column;
+        justify-content: space-evenly;
+        background-image: linear-gradient(to bottom, white, aliceblue);
+        overflow: hidden;
+        box-sizing: border-box;
+        transition: all .5s ease-in-out;
+    }
+
+
+    nav ul a {
+        font-size: 20px;
+        color: #676767;
+    }
+
+    .b-contact{
+        background-color: yellow;
+        color: black;
+        width: 120px;
+        height: 50px;
+        border-radius: 20px;
+        font-weight: bold;
+        font-size: 0.8em;
+        border: none;
+        cursor: pointer;
+    }
+
+    nav :checked~ul {
+        bottom: 0;
+    }
+
+    nav .burger {
+        display: block;
+        z-index: 10;
+    }
+
+    nav :checked~.burger .linha:nth-child(1) {
+        transform: translateY(10px) rotate(225deg);
+        background-color: black;
+    }
+
+    nav :checked~.burger .linha:nth-child(3) {
+        transform: translateY(-10px) rotate(-225deg);
+        background-color: black;
+    }
+
+    nav :checked~.burger .linha:nth-child(2) {
+        opacity: 0;
+        background-color: black;
+    }
+
+
+    /* INICIO DA SEGUNDA SEÇÃO */
+    .caixa-egg{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .caixa-egg img{
+        max-width: 100%;
+        order: 1;
+    }
+
+    #transform-brand{
+        text-align: center;
+        padding: 0;
+        margin-top: 20%;
+        order: 2;
+    }
+
+    #transform-brand p{
+        max-width: 100%;
+    }
+
+    .copo-rosa{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .copo-rosa img{
+        max-width: 100%;
+        margin-top: 5em;
+    }
+
+    #stand-out{
+        text-align: center;
+        padding: 0;
+        margin: 20% auto;
+    }
+
+    #stand-out p{
+        max-width: 100%;
+    }
+
+    .cereja-mexerica{
+        flex-direction: column;
+    }
+
+    #Cereja, #mexerica{
+        width: 100%;
+        justify-content: center;
+    }  
+    
+    #Cereja p, #mexerica p{
+        width: 80%;
+        margin: 30px auto;
+    }
+
+    /* INICIO DO CONTAINER TESTEMUNHAS */
+
+    .testemunhos{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0;
+    } 
+    
+    .cliente{
+        margin: 0px 0px 80px 0px;
+    }
+
+    .txt-testimonials p, .info-cliente{
+        margin-top: 20px;
+    }
+
+
+    /* SEÇÃO DA IMAGENS ANTES DO FOOTER */
+    #imagens-pre-footer{
+        flex-wrap: wrap;
+    }
+
+    #imagens-pre-footerimg{
+        width: 50%;
+    }
+
+    /* INICIO FOOTER */
+    footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        width: 100%;
+    }
+
+    .logo-footer, .links-footer, .icones{
+        text-align: center;
+        justify-content: center;
+        margin-left: 0;
+    }
+}
